@@ -26,6 +26,7 @@
     "@babel/preset-react": "^7.12.13",
     "@babel/preset-typescript": "^7.12.13",
     "@babel/runtime": "^7.12.13",
+    "@types/styled-components": "^5.1.7",
     "@types/webpack": "^4.41.26",
     "@types/webpack-dev-server": "^3.11.1",
     "babel-loader": "^8.2.2",
