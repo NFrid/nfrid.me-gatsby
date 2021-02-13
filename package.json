@@ -4,11 +4,8 @@
   "description": "Nick Friday's personal website",
   "private": true,
   "dependencies": {
-    "@emotion/react": "^11.1.5",
-    "@emotion/styled": "^11.1.5",
     "@types/react": "^17.0.1",
     "@types/react-dom": "^17.0.0",
-    "framer-motion": "^3.3.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "styled-components": "^5.2.1",
