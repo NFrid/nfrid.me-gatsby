@@ -41,5 +41,4 @@ export const Ref = styled.a.attrs({
   color: ${d.yellowish};
   margin-bottom: 0.5em;
   font-size: 14px;
-  target: _blank;
 `;
