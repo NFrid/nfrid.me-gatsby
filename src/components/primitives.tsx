@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import d from "../styles/draculaColors";
+import { d } from "../styles/colors";
 
 export const Box = styled.div`
   margin: 1.5em 10vw;

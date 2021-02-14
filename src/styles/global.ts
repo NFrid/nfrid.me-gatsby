@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components";
-import d from "./draculaColors";
+import { d } from "./colors";
 
 const GlobalStyle = createGlobalStyle`
   body {

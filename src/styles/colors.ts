@@ -1,4 +1,5 @@
-const d = {
+// Dracula Colorscheme
+export const d = {
   bg: "#282a36",
   sel: "#44475a",
   fg: "#f8f8f2",
@@ -19,5 +20,3 @@ const d = {
   yellow: "#f1fa8c",
   yellowish: "#f4f99d",
 };
-
-export default d;
