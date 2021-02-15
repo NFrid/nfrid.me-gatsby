@@ -13,8 +13,10 @@ interface IProps {
 const Refs: FC<IProps> = ({ title, refs }) => (
   <RefBox>
     <RefTit>{title}</RefTit>
-    {refs.map((ref) => (
-      <Ref href={ref.href}>{ref.text}</Ref>
+    {refs.map((ref, i) => (
+      <Ref key={i} href={ref.href}>
+        {ref.text}
+      </Ref>
     ))}
   </RefBox>
 );
