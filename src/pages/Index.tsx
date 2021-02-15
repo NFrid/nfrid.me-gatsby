@@ -1,16 +1,9 @@
-import {
-  Tit,
-  Subtit,
-  Par,
-  RefBox,
-  RefTit,
-  Ref,
-} from "../components/primitives";
+import { Box, Tit, Par } from "../components/primitives";
+import Refs from "../components/Refs";
 
 const Index = () => (
-  <>
-    <Tit>nfrid.me</Tit>
-    <Subtit>Nick Friday's personal website</Subtit>
+  <Box>
+    <Tit>Nick Friday's personal website</Tit>
     <Par>This website isn't completed right now. Please stay tuned!!</Par>
     <Par>
       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -22,12 +15,19 @@ const Index = () => (
       est laborum.
     </Par>
     <Tit>👽️</Tit>
-    <RefBox>
-      <RefTit>Some useful links</RefTit>
-      <Ref href="https://github.com/NFrid/nfrid.me">Project's GitHub page</Ref>
-      <Ref href="https://bit.ly/2JqTOBQ">Very important stuff !!</Ref>
-    </RefBox>
-  </>
+    <Refs title="Some useful links" refs={refs} />
+  </Box>
 );
 
 export default Index;
+
+const refs = [
+  {
+    text: "Project's GitHub page",
+    href: "https://github.com/NFrid/nfrid.me",
+  },
+  {
+    text: "Very important stuff !!",
+    href: "https://bit.ly/2JqTOBQ",
+  },
+];

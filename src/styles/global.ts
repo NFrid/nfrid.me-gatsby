@@ -3,7 +3,7 @@ import { d } from "./colors";
 
 const GlobalStyle = createGlobalStyle`
   body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Verdana, Helvetica, sans-serif;
     background: ${d.bg};
     height: 100vh;
     padding: 2em;

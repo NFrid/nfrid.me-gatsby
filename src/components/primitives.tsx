@@ -6,39 +6,13 @@ export const Box = styled.div`
   text-align: justify;
 `;
 
-export const Tit = styled.h1`
+export const Tit = styled.h2`
   text-align: center;
-  color: ${d.greenish};
-`;
-
-export const Subtit = styled.h2`
-  text-align: center;
+  margin-bottom: 1.5em;
   color: ${d.purpleish};
 `;
 
 export const Par = styled.p`
-  font-size: 18px;
+  font-size: 1.1em;
   color: ${d.fg};
-`;
-
-export const RefBox = styled(Box)`
-  margin: 5em 0;
-  & * {
-    display: block;
-    text-align: right;
-  }
-`;
-
-export const RefTit = styled(Tit)`
-  color: ${d.redish};
-  font-size: 20px;
-`;
-
-export const Ref = styled.a.attrs({
-  target: "_blank",
-})`
-  text-decoration: none;
-  color: ${d.yellowish};
-  margin-bottom: 0.5em;
-  font-size: 14px;
 `;
