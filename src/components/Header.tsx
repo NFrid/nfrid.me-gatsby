@@ -20,6 +20,7 @@ export default Header;
 
 const Box = styled.div`
   display: flex;
+  flex-wrap: wrap;
   background-color: ${d.bgd};
   flex-direction: row;
   justify-content: space-between;
@@ -32,7 +33,9 @@ const Logo = styled.h1`
 `;
 
 const Nav = styled.div`
+  margin-left: auto;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
 `;
 
