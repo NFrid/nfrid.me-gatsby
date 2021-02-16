@@ -6,6 +6,7 @@ const GlobalStyle = createGlobalStyle`
     overflow: scroll;
     overflow-x: hidden;
     scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
   }
   ::-webkit-scrollbar {
     width: 0;
