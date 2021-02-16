@@ -11,6 +11,6 @@ const Box = styled.div`
   padding: 0.5em;
 `;
 
-const Footer = () => <Box>{"e".repeat(500)}</Box>;
+const Footer = () => <Box>© Nick Friday aka undefined, 2021</Box>;
 
 export default Footer;
