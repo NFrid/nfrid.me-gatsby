@@ -23,6 +23,16 @@ const GlobalStyle = createGlobalStyle`
     color: ${d.fg};
     line-height: 2em;
   }
+
+  a {
+  text-decoration: none;
+  color: ${d.yellowish};
+  transition: 0.2s;
+
+  &:hover {
+    color: ${d.purpleish};
+  }
+  }
 `;
 
 export default GlobalStyle;

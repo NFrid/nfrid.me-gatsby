@@ -39,18 +39,13 @@ const Nav = styled.div`
 //   getProps: ({ isCurrent }) => (isCurrent ? { className: "active" } : {}),
 // })
 const Item = styled(Link)`
-  text-decoration: none;
   padding: 1em 0.5em;
-  color: ${d.yellowish};
-  transition: 0.2s;
 
   &[aria-current] {
     color: ${d.greenish};
   }
 
   &:hover {
-    color: ${d.purpleish};
-
     &[aria-current] {
       color: ${d.orange};
     }

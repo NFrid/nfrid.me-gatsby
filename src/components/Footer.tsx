@@ -55,14 +55,7 @@ const Link = styled.a.attrs({
   rel: "me",
   target: "_blank",
 })`
-  margin: 0 0.5em;
-  text-decoration: none;
-  color: ${d.yellowish};
-  transition: 0.2s;
-
-  &:hover {
-    color: ${d.purpleish};
-  }
+  padding: 0.7em 0.5em;
 `;
 
 const QueryFooter = graphql`

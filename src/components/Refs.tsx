@@ -16,6 +16,7 @@ const Refs: React.FC<IProps> = ({ title, refs }) => (
     {refs.map((ref, i) => (
       <Ref key={i} href={ref.href}>
         {ref.text}
+        <br />
       </Ref>
     ))}
   </RefBox>
@@ -25,10 +26,7 @@ export default Refs;
 
 const RefBox = styled.div`
   margin: 5em 0;
-  & * {
-    display: block;
-    text-align: right;
-  }
+  text-align: right;
 `;
 
 const RefTit = styled.h2`
@@ -39,8 +37,6 @@ const RefTit = styled.h2`
 const Ref = styled.a.attrs({
   target: "_blank",
 })`
-  text-decoration: none;
-  color: ${d.yellowish};
-  margin-bottom: 0.5em;
+  padding: 0.5em 0 0.5em 1em;
   font-size: 0.9em;
 `;
