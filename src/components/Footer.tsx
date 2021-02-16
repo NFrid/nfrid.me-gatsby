@@ -21,17 +21,9 @@ const Footer = () => (
         </MBox>
         <div>© Nick Friday aka undefined, 2021</div>
         <MBox>
-          <a rel="me" href={mastodon}>
-            Mastodon
-          </a>
-          |
-          <a rel="me" href={github}>
-            GitHub
-          </a>
-          |
-          <a rel="me" href={telegram}>
-            Telegram
-          </a>
+          <Link href={mastodon}>Mastodon</Link>|
+          <Link href={github}>GitHub</Link>|
+          <Link href={telegram}>Telegram</Link>
         </MBox>
       </Box>
     )}
@@ -57,15 +49,19 @@ const MBox = styled.div`
   flex: 1;
   color: ${d.com};
   white-space: nowrap;
-  a {
-    margin: 0 0.5em;
-    text-decoration: none;
-    color: ${d.yellowish};
-    transition: 0.2s;
+`;
 
-    &:hover {
-      color: ${d.purpleish};
-    }
+const Link = styled.a.attrs({
+  rel: "me",
+  target: "_blank",
+})`
+  margin: 0 0.5em;
+  text-decoration: none;
+  color: ${d.yellowish};
+  transition: 0.2s;
+
+  &:hover {
+    color: ${d.purpleish};
   }
 `;
 
