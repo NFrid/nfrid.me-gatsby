@@ -1,5 +1,7 @@
 import React, { ReactChild } from "react";
 import styled from "styled-components";
+import { YMInitializer } from "react-yandex-metrika";
+
 import GlobalStyle from "../styles/global";
 import Header from "../components/Header";
 import Head from "../components/Head";
@@ -15,6 +17,7 @@ interface ILayoutProps {
 export default ({ children, location }: ILayoutProps) => {
   return (
     <Flex>
+      <YMInitializer accounts={[72555754]} />
       <GlobalStyle />
       <Head pathname={location.pathname} />
       <Header />

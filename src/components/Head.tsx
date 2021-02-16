@@ -1,7 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import { StaticQuery, graphql } from "gatsby";
-import { YMInitializer } from "react-yandex-metrika";
 
 interface IHeadProps {
   title?: string;
@@ -46,8 +45,6 @@ export default ({
           <meta name="image" content={seo.image} />
           <meta name="application-name" content={site} />
           <link rel="canonical" href={seo.url} />
-
-          <YMInitializer accounts={[72555754]} />
 
           <meta property="og:url" content={seo.url} />
           <meta property="og:title" content={seo.title} />
