@@ -46,16 +46,18 @@ const Box = styled.div`
   color: ${d.fg};
   text-align: center;
   font-size: 12px;
-  /* padding: 0.5em; */
+  padding: 0.5em;
 
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  flex-wrap: wrap-reverse;
 `;
 
 const MBox = styled.div`
   flex: 1;
   color: ${d.com};
+  white-space: nowrap;
   a {
     margin: 0 0.5em;
     text-decoration: none;
