@@ -21,6 +21,7 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     color: ${d.fg};
+    line-height: 2em;
   }
 `;
 

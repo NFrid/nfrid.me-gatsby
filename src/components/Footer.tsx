@@ -46,7 +46,7 @@ const Box = styled.div`
   color: ${d.fg};
   text-align: center;
   font-size: 12px;
-  padding: 0.5em;
+  /* padding: 0.5em; */
 
   display: flex;
   flex-direction: row;
