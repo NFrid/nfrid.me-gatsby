@@ -10,6 +10,7 @@ export default () => (
     <Nav>
       <Item to="/">Index</Item>
       <Item to="/about/">About</Item>
+      <Item to="/todo/">Todo</Item>
     </Nav>
   </Box>
 );
