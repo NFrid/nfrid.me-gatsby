@@ -1,5 +1,5 @@
 // Dracula Colorscheme
-export const d = {
+export const c = {
   bg: "#282a36",
   bgd: "#1e1f29",
   sel: "#44475a",

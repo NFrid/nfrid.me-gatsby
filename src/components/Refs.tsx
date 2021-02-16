@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { d } from "../styles/colors";
+import { c } from "../styles/colors";
 
 interface IProps {
   title: string;
@@ -30,7 +30,7 @@ const RefBox = styled.div`
 `;
 
 const RefTit = styled.h2`
-  color: ${d.redish};
+  color: ${c.redish};
   font-size: 1.3em;
 `;
 

@@ -2,7 +2,7 @@ import { graphql, StaticQuery } from "gatsby";
 import React from "react";
 import styled from "styled-components";
 
-import { d } from "../styles/colors";
+import { c } from "../styles/colors";
 
 const Footer = () => (
   <StaticQuery
@@ -16,8 +16,8 @@ const Footer = () => (
     }) => (
       <Box>
         <MBox>
-          Powered by <b style={{ color: d.redish }}>Gatsby</b> and{" "}
-          <b style={{ color: d.pinkish }}>anime</b>
+          Powered by <b style={{ color: c.redish }}>Gatsby</b> and{" "}
+          <b style={{ color: c.pinkish }}>anime</b>
         </MBox>
         <div>© Nick Friday aka undefined, 2021</div>
         <MBox>
@@ -34,8 +34,8 @@ export default Footer;
 
 const Box = styled.div`
   margin-top: auto;
-  background-color: ${d.bgd};
-  color: ${d.fg};
+  background-color: ${c.bgd};
+  color: ${c.fg};
   text-align: center;
   font-size: 12px;
 
@@ -47,7 +47,7 @@ const Box = styled.div`
 
 const MBox = styled.div`
   flex: 1;
-  color: ${d.com};
+  color: ${c.com};
   white-space: nowrap;
 `;
 

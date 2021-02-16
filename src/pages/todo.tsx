@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 import Layout from "../layout";
 import { Tit, Par } from "../components/primitives";
-import { d } from "../styles/colors";
+import { c } from "../styles/colors";
 
 interface AboutPageProps {
   location: {
@@ -49,7 +49,7 @@ const Todos = styled.ul`
   list-style-position: inside;
 
   li {
-    color: ${d.greenish};
+    color: ${c.greenish};
     margin: 2em 0 1em 1em;
   }
 `;

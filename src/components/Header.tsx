@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "@reach/router";
 
-import { d } from "../styles/colors";
+import { c } from "../styles/colors";
 
 export default () => (
   <Box>
@@ -18,14 +18,14 @@ export default () => (
 const Box = styled.div`
   display: flex;
   flex-wrap: wrap;
-  background-color: ${d.bgd};
+  background-color: ${c.bgd};
   flex-direction: row;
   justify-content: space-between;
   padding: 0 1rem;
 `;
 
 const Logo = styled.h1`
-  color: ${d.greenish};
+  color: ${c.greenish};
   font-size: 1.5rem;
 `;
 
@@ -42,12 +42,12 @@ const Item = styled(Link)`
   padding: 1em 0.5em;
 
   &[aria-current] {
-    color: ${d.greenish};
+    color: ${c.greenish};
   }
 
   &:hover {
     &[aria-current] {
-      color: ${d.orange};
+      color: ${c.orange};
     }
   }
 `;
