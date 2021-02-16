@@ -1,4 +1,4 @@
-import { FC } from "react";
+import React from "react";
 import styled from "styled-components";
 import { d } from "../styles/colors";
 
@@ -10,7 +10,7 @@ interface IProps {
   }[];
 }
 
-const Refs: FC<IProps> = ({ title, refs }) => (
+const Refs: React.FC<IProps> = ({ title, refs }) => (
   <RefBox>
     <RefTit>{title}</RefTit>
     {refs.map((ref, i) => (

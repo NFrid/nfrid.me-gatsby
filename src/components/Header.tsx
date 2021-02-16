@@ -1,22 +1,18 @@
+import React from "react";
 import styled from "styled-components";
+import { Link } from "@reach/router";
+
 import { d } from "../styles/colors";
 
-const Header = () => (
+export default () => (
   <Box>
     <Logo>nfrid.me</Logo>
     <Nav>
-      <Item href="https://nfrid.me">Test</Item>
-      <Item href="https://nfrid.me">Test</Item>
-      <Item active href="https://nfrid.me">
-        Test
-      </Item>
-      <Item href="https://nfrid.me">Test</Item>
-      <Item href="https://nfrid.me">Test</Item>
+      <Item to="/">Index</Item>
+      <Item to="/about/">About</Item>
     </Nav>
   </Box>
 );
-
-export default Header;
 
 const Box = styled.div`
   display: flex;
@@ -38,14 +34,24 @@ const Nav = styled.div`
   flex-wrap: wrap;
   align-items: center;
 `;
-
-const Item = styled.a<{ active?: boolean }>`
+// .attrs({
+//   getProps: ({ isCurrent }) => (isCurrent ? { className: "active" } : {}),
+// })
+const Item = styled(Link)`
   text-decoration: none;
   padding: 1em 0.5em;
-  color: ${(props) => (props.active ? d.greenish : d.yellowish)};
+  color: ${d.yellowish};
   transition: 0.2s;
 
+  &[aria-current] {
+    color: ${d.greenish};
+  }
+
   &:hover {
-    color: ${(props) => (props.active ? d.orange : d.purpleish)};
+    color: ${d.purpleish};
+
+    &[aria-current] {
+      color: ${d.orange};
+    }
   }
 `;

@@ -1,11 +1,6 @@
 import styled from "styled-components";
 import { d } from "../styles/colors";
 
-export const Box = styled.div`
-  margin: 1.5em 10vw;
-  text-align: justify;
-`;
-
 export const Tit = styled.h2`
   text-align: center;
   margin-bottom: 1.5em;
