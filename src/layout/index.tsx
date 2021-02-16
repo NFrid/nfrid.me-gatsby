@@ -20,7 +20,6 @@ export default ({ children, location }: ILayoutProps) => {
       <Header />
       <Box>{children}</Box>
       <Footer />
-      <a rel="me" href="https://mastodon.ml/@nf" />
     </Flex>
   );
 };

@@ -6,6 +6,11 @@ module.exports = {
     description: `Nick Friday's personal website`,
     siteUrl: `https://nfrid.me/`,
     language: `en`,
+    refs: {
+      mastodon: `https://mastodon.ml/@nf`,
+      telegram: `https://t.me/nfrid5`,
+      github: `https://github.com/NFrid`,
+    },
   },
   plugins: [
     {
