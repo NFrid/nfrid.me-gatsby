@@ -11,3 +11,7 @@ export const Par = styled.p`
   font-size: 1.1em;
   color: ${c.fg};
 `;
+
+export const Em = styled.em`
+  color: ${c.pinkish};
+`;

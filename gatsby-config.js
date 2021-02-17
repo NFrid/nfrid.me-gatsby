@@ -1,3 +1,5 @@
+const date = new Date().toUTCString();
+
 module.exports = {
   siteMetadata: {
     site: `nfrid.me`,
@@ -11,6 +13,7 @@ module.exports = {
       telegram: `https://t.me/nfrid5`,
       github: `https://github.com/NFrid`,
     },
+    lastUpdate: date,
   },
   plugins: [
     {
