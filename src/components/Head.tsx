@@ -10,7 +10,7 @@ interface IHeadProps {
   pathname: string;
 }
 
-export default ({
+const Head = ({
   title,
   description,
   thumbnail,
@@ -69,6 +69,8 @@ export default ({
     }}
   />
 );
+
+export default Head;
 
 const QueryHead = graphql`
   query QueryHead {

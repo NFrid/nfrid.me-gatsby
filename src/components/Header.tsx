@@ -4,7 +4,7 @@ import { Link } from "@reach/router";
 
 import { c } from "../styles/colors";
 
-export default () => (
+const Header = () => (
   <Box>
     <Logo>nfrid.me</Logo>
     <Nav>
@@ -14,6 +14,8 @@ export default () => (
     </Nav>
   </Box>
 );
+
+export default Header;
 
 const Box = styled.div`
   display: flex;
