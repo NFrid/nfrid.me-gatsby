@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 import { c } from "../styles/colors";
 
@@ -42,4 +42,38 @@ export const Par = styled.p`
 
 export const Em = styled.em`
   color: ${c.pinkish};
+`;
+
+const fadeIn = keyframes`
+  from {
+    /* transform: scale(.25); */
+    opacity: 0;
+  }
+
+  to {
+    /* transform: scale(1); */
+    opacity: 1;
+  }
+`;
+
+const fadeOut = keyframes`
+  from {
+    /* transform: scale(1); */
+    opacity: 0;
+  }
+
+  to {
+    /* transform: scale(.25); */
+    opacity: 1;
+  }
+`;
+
+interface FadeProps {
+  out: boolean;
+}
+
+export const FadeWrapper = styled.div<FadeProps>`
+  visibility: ${({ out }) => (out ? "hidden" : "visible")};
+  animation: ${({ out }) => (out ? fadeOut : fadeIn)} 0.1s linear;
+  transition: visibility 0.1s linear;
 `;
