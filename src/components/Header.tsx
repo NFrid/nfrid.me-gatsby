@@ -1,23 +1,23 @@
 import React from "react";
 import styled from "styled-components";
-import { Link, LinkGetProps } from "@reach/router";
 
+import Link from "./Link";
 import { c } from "../styles/colors";
 
 const Header = () => (
   <Box>
     <Logo>nfrid.me</Logo>
     <Nav>
-      <Item to="/">Index</Item>
-      <Item nested to="/about/">
+      <Link to="/">Index</Link>
+      <Link nested to="/about/">
         About
-      </Item>
-      <Item nested to="/dev/">
+      </Link>
+      <Link nested to="/dev/">
         Dev
-      </Item>
-      <Item nested to="/todo/">
+      </Link>
+      <Link nested to="/todo/">
         Todo
-      </Item>
+      </Link>
     </Nav>
   </Box>
 );
@@ -43,29 +43,4 @@ const Nav = styled.div`
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-`;
-
-const activeLink = (nested: boolean, className: string) =>
-  nested
-    ? ({ isPartiallyCurrent }: LinkGetProps) =>
-        isPartiallyCurrent ? { className: className + " active" } : {}
-    : ({ isCurrent }: LinkGetProps) =>
-        isCurrent ? { className: className + " active" } : {};
-
-const SLink = (props: any) => (
-  <Link {...props} getProps={activeLink(props.nested, props.className)} />
-);
-
-const Item = styled(SLink)`
-  padding: 1em 0.5em;
-
-  &.active {
-    color: ${c.greenish};
-  }
-
-  &:hover {
-    &.active {
-      color: ${c.orange};
-    }
-  }
 `;
