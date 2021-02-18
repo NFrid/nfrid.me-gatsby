@@ -5,13 +5,9 @@ import Layout from "../layout/index";
 import { Tit, Par } from "../components/primitives";
 import Refs from "../components/Refs";
 
-interface IndexPageProps {
-  location: {
-    pathname: string;
-  };
-}
+import PageProps from "../ifaces/PageProps";
 
-export default ({ location }: IndexPageProps) => {
+export default ({ location }: PageProps) => {
   return (
     <Layout location={location}>
       <>

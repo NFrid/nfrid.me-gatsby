@@ -1,16 +1,12 @@
 import * as React from "react";
+import { graphql, StaticQuery } from "gatsby";
 
 import Layout from "../layout";
 import { Tit, Par, Em } from "../components/primitives";
-import { graphql, StaticQuery } from "gatsby";
 
-interface AboutPageProps {
-  location: {
-    pathname: string;
-  };
-}
+import PageProps from "../ifaces/PageProps";
 
-export default ({ location }: AboutPageProps) => (
+export default ({ location }: PageProps) => (
   <StaticQuery
     query={QueryMeta}
     render={({

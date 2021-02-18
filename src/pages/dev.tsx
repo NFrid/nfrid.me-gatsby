@@ -1,7 +1,9 @@
 import * as React from "react";
-import { Par, Tit } from "../components/primitives";
 
 import Layout from "../layout/index";
+
+import { Tit } from "../components/primitives";
+import { Link } from "gatsby";
 
 import PageProps from "../ifaces/PageProps";
 
@@ -9,8 +11,8 @@ export default ({ location }: PageProps) => {
   return (
     <Layout location={location}>
       <>
-        <Tit>404 - Page Not Found</Tit>
-        <Par>There's no such page as {location.pathname}...</Par>
+        <Tit>Me? Developer!</Tit>
+        <Link to={`${location.pathname}skills`}>Ma skills</Link>
       </>
     </Layout>
   );

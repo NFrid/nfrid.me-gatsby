@@ -5,13 +5,9 @@ import Layout from "../layout";
 import { Tit, Par } from "../components/primitives";
 import { c } from "../styles/colors";
 
-interface AboutPageProps {
-  location: {
-    pathname: string;
-  };
-}
+import PageProps from "../ifaces/PageProps";
 
-export default ({ location }: AboutPageProps) => {
+export default ({ location }: PageProps) => {
   return (
     <Layout location={location}>
       <>
