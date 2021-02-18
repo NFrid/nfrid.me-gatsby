@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Link } from "@reach/router";
+import { Link, LinkGetProps } from "@reach/router";
 
 import { c } from "../styles/colors";
 
@@ -9,8 +9,15 @@ const Header = () => (
     <Logo>nfrid.me</Logo>
     <Nav>
       <Item to="/">Index</Item>
-      <Item to="/about/">About</Item>
-      <Item to="/todo/">Todo</Item>
+      <Item nested to="/about/">
+        About
+      </Item>
+      <Item nested to="/dev/">
+        Dev
+      </Item>
+      <Item nested to="/todo/">
+        Todo
+      </Item>
     </Nav>
   </Box>
 );
@@ -37,18 +44,27 @@ const Nav = styled.div`
   flex-wrap: wrap;
   align-items: center;
 `;
-// .attrs({
-//   getProps: ({ isCurrent }) => (isCurrent ? { className: "active" } : {}),
-// })
-const Item = styled(Link)`
+
+const activeLink = (nested: boolean, className: string) =>
+  nested
+    ? ({ isPartiallyCurrent }: LinkGetProps) =>
+        isPartiallyCurrent ? { className: className + " active" } : {}
+    : ({ isCurrent }: LinkGetProps) =>
+        isCurrent ? { className: className + " active" } : {};
+
+const SLink = (props: any) => (
+  <Link {...props} getProps={activeLink(props.nested, props.className)} />
+);
+
+const Item = styled(SLink)`
   padding: 1em 0.5em;
 
-  &[aria-current] {
+  &.active {
     color: ${c.greenish};
   }
 
   &:hover {
-    &[aria-current] {
+    &.active {
       color: ${c.orange};
     }
   }
