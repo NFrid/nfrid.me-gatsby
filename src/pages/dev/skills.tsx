@@ -6,7 +6,7 @@ import Menu from "../../components/Menu";
 
 import PageProps from "../../ifaces/PageProps";
 
-export default ({ location }: PageProps) => {
+const SkillsPage: React.FC<PageProps> = ({ location }) => {
   return (
     <Layout location={location}>
       <>
@@ -50,7 +50,7 @@ export default ({ location }: PageProps) => {
                 <div title="JS">
                   <ul>
                     <li>Styled Components</li>
-                    <li>React's CSS in JS</li>
+                    <li>React&apos;s CSS in JS</li>
                   </ul>
                 </div>
               </Menu>
@@ -63,9 +63,13 @@ export default ({ location }: PageProps) => {
               </ul>
             </div>
           </Menu>
-          <div title="W.I.P">There're more I didn't put here yet!</div>
+          <div title="W.I.P">
+            There&apos;re more I didn&apos;t put here yet!
+          </div>
         </Menu>
       </>
     </Layout>
   );
 };
+
+export default SkillsPage;

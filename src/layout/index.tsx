@@ -14,7 +14,7 @@ interface ILayoutProps {
   };
 }
 
-export default ({ children, location }: ILayoutProps) => {
+const DefaultLayout: React.FC<ILayoutProps> = ({ children, location }) => {
   return (
     <Flex>
       <YMInitializer accounts={[72555754]} />
@@ -26,6 +26,8 @@ export default ({ children, location }: ILayoutProps) => {
     </Flex>
   );
 };
+
+export default DefaultLayout;
 
 const Flex = styled.div`
   display: flex;

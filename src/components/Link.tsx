@@ -11,6 +11,9 @@ const activeLink = (nested: boolean, className: string) =>
     : ({ isCurrent }: LinkGetProps) =>
         isCurrent ? { className: className + " active" } : {};
 
+// I hate Reach Router I hate it so bad why it doesn't have any types for a
+// damn Link component props oh shit oh fuck please do.
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const NLink = (props: any) => (
   <Link {...props} getProps={activeLink(props.nested, props.className)} />
 );

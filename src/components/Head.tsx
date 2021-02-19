@@ -10,13 +10,13 @@ interface IHeadProps {
   pathname: string;
 }
 
-const Head = ({
+const Head: React.FC<IHeadProps> = ({
   title,
   description,
   thumbnail,
   pathname,
   article,
-}: IHeadProps) => (
+}) => (
   <StaticQuery
     query={QueryHead}
     render={({

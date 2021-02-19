@@ -6,7 +6,7 @@ import { Tit, Par, Em } from "../components/primitives";
 
 import PageProps from "../ifaces/PageProps";
 
-export default ({ location }: PageProps) => (
+const AboutPage: React.FC<PageProps> = ({ location }) => (
   <StaticQuery
     query={QueryMeta}
     render={({
@@ -30,6 +30,8 @@ export default ({ location }: PageProps) => (
     }}
   />
 );
+
+export default AboutPage;
 
 const QueryMeta = graphql`
   query QueryMeta {

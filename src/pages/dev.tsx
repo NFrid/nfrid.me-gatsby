@@ -7,7 +7,7 @@ import { Link } from "gatsby";
 
 import PageProps from "../ifaces/PageProps";
 
-export default ({ location }: PageProps) => {
+const DevPage: React.FC<PageProps> = ({ location }) => {
   return (
     <Layout location={location}>
       <>
@@ -17,3 +17,5 @@ export default ({ location }: PageProps) => {
     </Layout>
   );
 };
+
+export default DevPage;

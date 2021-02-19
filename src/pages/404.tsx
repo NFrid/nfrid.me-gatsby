@@ -5,13 +5,15 @@ import Layout from "../layout/index";
 
 import PageProps from "../ifaces/PageProps";
 
-export default ({ location }: PageProps) => {
+const NotFoundPage: React.FC<PageProps> = ({ location }) => {
   return (
     <Layout location={location}>
       <>
         <Tit>404 - Page Not Found</Tit>
-        <Par>There's no such page as {location.pathname}...</Par>
+        <Par>There&apos;s no such page as {location.pathname}...</Par>
       </>
     </Layout>
   );
 };
+
+export default NotFoundPage;

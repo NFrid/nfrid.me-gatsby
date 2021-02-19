@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 import { c } from "../styles/colors";
 
-const Footer = () => (
+const Footer: React.FC = () => (
   <StaticQuery
     query={QueryFooter}
     render={({

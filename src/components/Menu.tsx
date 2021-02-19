@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { c } from "../styles/colors";
-import { FadeWrapper } from "./primitives";
+import { FadeWrapper } from ".";
 
 interface IProps {
   children: JSX.Element[];
   title?: string;
 }
 
-const Menu = ({ children }: IProps) => {
+const Menu: React.FC<IProps> = ({ children }) => {
   const [choise, setChoise] = useState(0);
 
   return (

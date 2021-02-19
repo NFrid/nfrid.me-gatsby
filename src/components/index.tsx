@@ -27,7 +27,7 @@ const BackB = styled.a`
   cursor: pointer;
 `;
 
-export const BackTit = ({ children }: IChildren) => (
+export const BackTit: React.FC<IChildren> = ({ children }) => (
   <BackWrap>
     <BackB onClick={() => history.back()}>{"<- "}Back</BackB>
     <Tit>{children}</Tit>

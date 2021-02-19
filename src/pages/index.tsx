@@ -7,12 +7,14 @@ import Refs from "../components/Refs";
 
 import PageProps from "../ifaces/PageProps";
 
-export default ({ location }: PageProps) => {
+const IndexPage: React.FC<PageProps> = ({ location }) => {
   return (
     <Layout location={location}>
       <>
-        <Tit>Nick Friday's personal website</Tit>
-        <Par>This website isn't completed right now. Please stay tuned!!</Par>
+        <Tit>Nick Friday&apos;s personal website</Tit>
+        <Par>
+          This website isn&apos;t completed right now. Please stay tuned!!
+        </Par>
         <Par>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
@@ -28,6 +30,8 @@ export default ({ location }: PageProps) => {
     </Layout>
   );
 };
+
+export default IndexPage;
 
 const refs = [
   {
