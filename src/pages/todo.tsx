@@ -2,7 +2,7 @@ import * as React from "react";
 import styled from "styled-components";
 
 import Layout from "../layout";
-import { Tit, Par } from "../components/primitives";
+import { Tit, Par } from "../components";
 import { c } from "../styles/colors";
 
 import PageProps from "../ifaces/PageProps";

@@ -2,7 +2,7 @@ import * as React from "react";
 
 import Layout from "../layout/index";
 
-import { Tit, Par } from "../components/primitives";
+import { Tit, Par } from "../components";
 import Refs from "../components/Refs";
 
 import PageProps from "../ifaces/PageProps";

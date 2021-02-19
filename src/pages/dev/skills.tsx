@@ -1,7 +1,7 @@
 import * as React from "react";
 
 import Layout from "../../layout/index";
-import { BackTit } from "../../components/primitives";
+import { BackTit } from "../../components";
 import Menu from "../../components/Menu";
 
 import PageProps from "../../ifaces/PageProps";

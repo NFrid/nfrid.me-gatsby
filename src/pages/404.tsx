@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Par, Tit } from "../components/primitives";
+import { Par, Tit } from "../components";
 
 import Layout from "../layout/index";
 

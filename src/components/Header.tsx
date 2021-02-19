@@ -4,7 +4,7 @@ import styled from "styled-components";
 import Link from "./Link";
 import { c } from "../styles/colors";
 
-const Header = () => (
+const Header: React.FC = () => (
   <Box>
     <Logo>nfrid.me</Logo>
     <Nav>

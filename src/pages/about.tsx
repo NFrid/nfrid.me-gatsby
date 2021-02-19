@@ -2,7 +2,7 @@ import * as React from "react";
 import { graphql, StaticQuery } from "gatsby";
 
 import Layout from "../layout";
-import { Tit, Par, Em } from "../components/primitives";
+import { Tit, Par, Em } from "../components";
 
 import PageProps from "../ifaces/PageProps";
 
