@@ -16,10 +16,26 @@ const Footer: React.FC = () => (
     }) => (
       <Box>
         <MBox>
-          Powered by <b style={{ color: c.redish }}>Gatsby</b> and{" "}
-          <b style={{ color: c.pinkish }}>anime</b>
+          Powered by{" "}
+          <a
+            target="_blank"
+            rel="noreferrer nofollow"
+            style={{ color: c.redish, fontWeight: "bold" }}
+            href="https://www.gatsbyjs.com/"
+          >
+            Gatsby
+          </a>{" "}
+          and{" "}
+          <a
+            target="_blank"
+            rel="norefferer nofollow"
+            style={{ color: c.pinkish, fontWeight: "bold" }}
+            // href="#"
+          >
+            anime
+          </a>
         </MBox>
-        <div>© Nick Friday aka undefined, 2021</div>
+        <div>© 2021 Nick Friday a.k.a. undefined</div>
         <MBox>
           <Link href={mastodon}>Mastodon</Link>|
           <Link href={github}>GitHub</Link>|
