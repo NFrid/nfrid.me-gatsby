@@ -21,7 +21,7 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     color: ${c.fg};
-    line-height: 2em;
+    line-height: 1.75em;
   }
 
   a {
@@ -29,9 +29,9 @@ const GlobalStyle = createGlobalStyle`
   color: ${c.yellowish};
   transition: 0.2s;
 
-  &:hover {
-    color: ${c.purpleish};
-  }
+    &:hover {
+      color: ${c.purpleish};
+    }
   }
 `;
 

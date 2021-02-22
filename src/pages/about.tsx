@@ -17,7 +17,7 @@ const AboutPage: React.FC<PageProps> = ({ location }) => (
       const upd = new Date(lastUpdate);
       const updF = upd.toLocaleString("en-GB");
       return (
-        <Layout location={location}>
+        <Layout location={location} seo={{ title: "About" }}>
           <>
             <Tit>About this website</Tit>
             <Par>W.I.P. Stay tuned, bla-bla-bla...</Par>

@@ -9,13 +9,16 @@ const Header: React.FC = () => (
     <Logo>nfrid.me</Logo>
     <Nav>
       <Link to="/">Index</Link>
-      <Link nested to="/about/">
+      <Link nested to="/about">
         About
       </Link>
-      <Link nested to="/dev/">
+      <Link nested to="/dev">
         Dev
       </Link>
-      <Link nested to="/todo/">
+      <Link nested to="/blog">
+        Blog
+      </Link>
+      <Link nested to="/todo">
         Todo
       </Link>
     </Nav>

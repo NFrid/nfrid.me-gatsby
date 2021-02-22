@@ -3,8 +3,8 @@ const date = new Date().toUTCString();
 module.exports = {
   siteMetadata: {
     site: `nfrid.me`,
-    title: `nfrid.me`,
-    titleTemplate: `%s`,
+    title: `The`,
+    titleTemplate: `%s - nfrid.me`,
     description: `Nick Friday's personal website`,
     siteUrl: `https://nfrid.me/`,
     language: `en`,
@@ -21,6 +21,32 @@ module.exports = {
       options: {
         name: `img`,
         path: `${__dirname}/src/images/`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `posts`,
+        path: `${__dirname}/src/posts/`,
+      },
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 1200,
+            },
+          },
+        ],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-nprogress`,
+      options: {
+        color: `#f4f99d`,
       },
     },
     // {

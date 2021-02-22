@@ -8,7 +8,13 @@ import PageProps from "../../ifaces/PageProps";
 
 const SkillsPage: React.FC<PageProps> = ({ location }) => {
   return (
-    <Layout location={location}>
+    <Layout
+      location={location}
+      seo={{
+        title: "Dev Skills",
+        description: "My skills as a developer | Nick Friday's CV-ish",
+      }}
+    >
       <>
         <BackTit>Ma skills (W.I.P, just for demo)</BackTit>
         <Menu>

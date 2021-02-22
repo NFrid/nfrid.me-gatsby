@@ -7,7 +7,7 @@ import PageProps from "../ifaces/PageProps";
 
 const NotFoundPage: React.FC<PageProps> = ({ location }) => {
   return (
-    <Layout location={location}>
+    <Layout location={location} seo={{ title: "Not Found" }}>
       <>
         <Tit>404 - Page Not Found</Tit>
         <Par>There&apos;s no such page as {location.pathname}...</Par>

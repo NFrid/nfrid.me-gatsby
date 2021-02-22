@@ -12,14 +12,20 @@ interface ILayoutProps {
   location: {
     pathname: string;
   };
+  seo?: {
+    title?: string;
+    description?: string;
+    thumbnail?: string;
+    article?: boolean;
+  };
 }
 
-const DefaultLayout: React.FC<ILayoutProps> = ({ children, location }) => {
+const DefaultLayout: React.FC<ILayoutProps> = ({ children, location, seo }) => {
   return (
     <Flex>
       <YMInitializer accounts={[72555754]} />
       <GlobalStyle />
-      <Head pathname={location.pathname} />
+      <Head pathname={location.pathname} meta={seo} />
       <Header />
       <Box>{children}</Box>
       <Footer />

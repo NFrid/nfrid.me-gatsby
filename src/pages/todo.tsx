@@ -16,13 +16,6 @@ const TodoPage: React.FC<PageProps> = ({ location }) => {
           <Todos>
             <li>The Portfolio</li>
             Pretty and wholesome The Portfolio of mine as a dev. Almost a CV.
-            <li>Big ol&apos; blog</li>
-            Big ol&apos; blog in Markdown for makin&apos; articles in English{" "}
-            <b>and</b> Russian on all topics I want. The blog probably will have
-            tags feature if Gatsby can do it (Gatsby <b>can</b> for sure)...
-            <li>RSS fetcher for my Mastodon and stuff</li>
-            Simple RSS fetcher for all stuff I want. For now I suppose
-            it&apos;ll be Mastodon only, but <b>who knows</b>...
             <li>Fiction stuff for all my books, verses, stories, e.t.c.</li>
             <b>
               <u>
