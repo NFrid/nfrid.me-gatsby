@@ -36,7 +36,6 @@ export const BackTit: React.FC<IChildren> = ({ children }) => (
 
 export const Par = styled.p`
   font-size: 1.1em;
-  color: ${c.fg};
 `;
 
 export const Em = styled.em`

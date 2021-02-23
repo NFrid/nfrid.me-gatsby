@@ -5,6 +5,7 @@ import { Link } from "gatsby";
 
 import PageProps from "../../ifaces/PageProps";
 import Blog from "../../components/Blog";
+import styled from "styled-components";
 
 const BlogPage: React.FC<PageProps> = ({ location }) => {
   return (
@@ -16,17 +17,14 @@ const BlogPage: React.FC<PageProps> = ({ location }) => {
       }}
     >
       <>
-        <ul>
-          <li>
-            <Link to={`/blog/tech`}>[ENG] Technologies and stuff</Link>
-          </li>
-          <li>
-            <Link to={`/blog/fic`}>[RUS] Околохудожественное</Link>
-          </li>
-          <li>
-            <Link to={`/blog/etc`}>[RUS] Прочее</Link>
-          </li>
-        </ul>
+        <hr />
+        <Nav>
+          {"<"}
+          <Link to={`/blog/tech`}>[ENG] Technologies and stuff</Link>
+          <Link to={`/blog/fic`}>[RUS] Околохудожественное</Link>
+          <Link to={`/blog/etc`}>[RUS] Прочее</Link>
+          {">"}
+        </Nav>
         <hr />
         <Blog />
       </>
@@ -35,3 +33,16 @@ const BlogPage: React.FC<PageProps> = ({ location }) => {
 };
 
 export default BlogPage;
+
+const Nav = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 1.2em;
+  flex-wrap: wrap;
+
+  & * {
+    margin: 0.3em 1em;
+    white-space: nowrap;
+  }
+`;

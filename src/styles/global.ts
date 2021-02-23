@@ -20,7 +20,7 @@ const GlobalStyle = createGlobalStyle`
     padding: 2em;
     margin: 0;
     padding: 0;
-    color: ${c.fg};
+    color: ${c.grayish};
     line-height: 1.75em;
   }
 

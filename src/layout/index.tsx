@@ -47,6 +47,5 @@ const Flex = styled.div`
 `;
 
 const Box = styled.div`
-  margin: 1.5em 10vw;
-  text-align: justify;
+  margin: 1em 10vw;
 `;

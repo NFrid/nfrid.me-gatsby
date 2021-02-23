@@ -73,7 +73,7 @@ const Refs: React.FC<IProps> = ({ path }) => {
       {arts.map((art, id) => (
         <BlogWrapper key={id}>
           {art.blog ? (
-            <Link to={`/blog/${art.blog}`} style={{ color: c.redish }}>
+            <Link to={`/blog/${art.blog}`} style={{ color: c.pinkish }}>
               [{art.blog}]
             </Link>
           ) : (
@@ -82,7 +82,7 @@ const Refs: React.FC<IProps> = ({ path }) => {
           <Link style={{ fontSize: "1.3em", fontWeight: "bold" }} to={art.path}>
             {art.title}
           </Link>
-          <i style={{ color: c.pinkish }}>
+          <i style={{ color: c.redish }}>
             {"<"}
             {art.date}
             {">"}
@@ -98,7 +98,17 @@ const Refs: React.FC<IProps> = ({ path }) => {
 export default Refs;
 
 const BlogWrapper = styled.div`
+  margin-top: 2rem;
+
   & * {
-    margin: 0.5rem;
+    margin: 1rem 0.5rem;
+  }
+
+  @media (min-width: 901px) {
+    padding: 0 10%;
+  }
+
+  @media (min-width: 1201px) {
+    padding: 0 20%;
   }
 `;
