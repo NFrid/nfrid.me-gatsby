@@ -32,7 +32,7 @@ const Head: React.FC<IHeadProps> = ({ pathname, meta }) => (
         },
       },
     }) => {
-      meta ? (meta.lang ? (meta.lang = "en") : {}) : (meta = {});
+      meta ? (meta.lang ? {} : (meta.lang = language)) : (meta = {});
       const seo = {
         title: meta.title
           ? meta.title
@@ -48,7 +48,7 @@ const Head: React.FC<IHeadProps> = ({ pathname, meta }) => (
           ? meta.thumbnail
           : `${siteUrl}/assets/thumbnail.png`,
         url: `${siteUrl}${pathname}`,
-        lang: meta.lang || language,
+        lang: meta.lang,
       };
       return (
         <Helmet
