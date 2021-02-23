@@ -14,9 +14,11 @@ interface ILayoutProps {
   };
   seo?: {
     title?: string;
-    description?: string;
+    desc?: string;
     thumbnail?: string;
     article?: boolean;
+    lang?: string;
+    back?: boolean;
   };
 }
 
@@ -26,7 +28,10 @@ const DefaultLayout: React.FC<ILayoutProps> = ({ children, location, seo }) => {
       <YMInitializer accounts={[72555754]} />
       <GlobalStyle />
       <Head pathname={location.pathname} meta={seo} />
-      <Header />
+      <Header
+        title={seo ? (seo.title ? seo.title : "") : ""}
+        back={seo ? (seo.back ? seo.back : false) : false}
+      />
       <Box>{children}</Box>
       <Footer />
     </Flex>

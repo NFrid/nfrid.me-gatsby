@@ -7,22 +7,22 @@ interface IChildren {
   children: string;
 }
 
-export const Tit = styled.h2`
+export const Tit = styled.h1`
   text-align: center;
-  margin-bottom: 1.5em;
+  font-size: 1.5em;
   color: ${c.purpleish};
 `;
 
 const BackWrap = styled.div`
   display: flex;
-  justify-content: space-between;
 `;
 
 const BackB = styled.a`
   font-size: 1.2em;
+  text-align: center;
   background: none;
   border: none;
-  margin: auto 0;
+  margin: auto 1em;
   padding: 0;
   cursor: pointer;
 `;
@@ -31,7 +31,6 @@ export const BackTit: React.FC<IChildren> = ({ children }) => (
   <BackWrap>
     <BackB onClick={() => history.back()}>{"<- "}Back</BackB>
     <Tit>{children}</Tit>
-    <div></div>
   </BackWrap>
 );
 

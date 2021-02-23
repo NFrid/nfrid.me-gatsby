@@ -2,13 +2,22 @@ import React from "react";
 import styled from "styled-components";
 
 import Link from "./Link";
+import { Link as RLink } from "@reach/router";
 import { c } from "../styles/colors";
+import { BackTit, Tit } from ".";
 
-const Header: React.FC = () => (
+interface IProps {
+  title: string;
+  back: boolean;
+}
+
+const Header: React.FC<IProps> = ({ title, back }) => (
   <Box>
-    <Logo>nfrid.me</Logo>
+    <RLink to="/">
+      <Logo>nfrid.me</Logo>
+    </RLink>
+    <Nav>{back ? <BackTit>{title}</BackTit> : <Tit>{title}</Tit>}</Nav>
     <Nav>
-      <Link to="/">Index</Link>
       <Link nested to="/about">
         About
       </Link>
@@ -17,9 +26,6 @@ const Header: React.FC = () => (
       </Link>
       <Link nested to="/blog">
         Blog
-      </Link>
-      <Link nested to="/todo">
-        Todo
       </Link>
     </Nav>
   </Box>

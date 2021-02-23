@@ -1,10 +1,10 @@
 import { graphql, Link, useStaticQuery } from "gatsby";
 import React from "react";
+import styled from "styled-components";
 import { Par } from ".";
 import { c } from "../styles/colors";
 
 interface IProps {
-  lang?: string;
   path?: string;
 }
 
@@ -31,14 +31,7 @@ interface IArt {
   blog?: string;
 }
 
-const Refs: React.FC<IProps> = ({ lang, path }) => {
-  const noContent =
-    lang === "en"
-      ? "There's nothing right now :("
-      : lang === "ru"
-      ? "Здесь пока пусто :("
-      : "There's nothing right now | Здесь пока пусто :(";
-
+const Refs: React.FC<IProps> = ({ path }) => {
   const data: IData = useStaticQuery(graphql`
     {
       allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
@@ -74,30 +67,38 @@ const Refs: React.FC<IProps> = ({ lang, path }) => {
       }));
 
   return arts.length === 0 ? (
-    <Par>{noContent}</Par>
+    <Par>There&apos;s nothing right now | Здесь пока пусто :(</Par>
   ) : (
     <>
       {arts.map((art, id) => (
-        <div key={id}>
+        <BlogWrapper key={id}>
           {art.blog ? (
             <Link to={`/blog/${art.blog}`} style={{ color: c.redish }}>
               [{art.blog}]
             </Link>
           ) : (
             <></>
-          )}{" "}
+          )}
           <Link style={{ fontSize: "1.3em", fontWeight: "bold" }} to={art.path}>
             {art.title}
-          </Link>{" "}
-          {"<"}
-          <i style={{ color: c.pinkish }}>{art.date}</i>
-          {">"}
+          </Link>
+          <i style={{ color: c.pinkish }}>
+            {"<"}
+            {art.date}
+            {">"}
+          </i>
           <Par>{art.excerpt}</Par>
           <hr />
-        </div>
+        </BlogWrapper>
       ))}
     </>
   );
 };
 
 export default Refs;
+
+const BlogWrapper = styled.div`
+  & * {
+    margin: 0.5rem;
+  }
+`;

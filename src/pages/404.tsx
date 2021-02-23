@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Par, Tit } from "../components";
+import { Par } from "../components";
 
 import Layout from "../layout/index";
 
@@ -9,7 +9,6 @@ const NotFoundPage: React.FC<PageProps> = ({ location }) => {
   return (
     <Layout location={location} seo={{ title: "Not Found" }}>
       <>
-        <Tit>404 - Page Not Found</Tit>
         <Par>There&apos;s no such page as {location.pathname}...</Par>
       </>
     </Layout>

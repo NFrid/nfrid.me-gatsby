@@ -6,9 +6,11 @@ interface IHeadProps {
   pathname: string;
   meta?: {
     title?: string;
-    description?: string;
+    desc?: string;
     thumbnail?: string;
     article?: boolean;
+    lang?: string;
+    back?: boolean;
   };
 }
 
@@ -20,8 +22,11 @@ const Head: React.FC<IHeadProps> = ({ pathname, meta }) => (
         siteMetadata: {
           site,
           defaultTitle,
+          altTitle,
           titleTemplate,
-          defaultDescription,
+          altTitleTemplate,
+          description,
+          altDescription,
           language,
           siteUrl,
         },
@@ -29,23 +34,37 @@ const Head: React.FC<IHeadProps> = ({ pathname, meta }) => (
     }) => {
       meta ? {} : (meta = {});
       const seo = {
-        title: meta.title || defaultTitle,
-        description: meta.description || defaultDescription,
-        image: meta.thumbnail || `${siteUrl}/assets/thumbnail.png`,
+        title: meta.title
+          ? meta.title
+          : meta.lang === "en"
+          ? defaultTitle
+          : altTitle,
+        desc: meta.desc
+          ? meta.desc
+          : meta.lang === "en"
+          ? description
+          : altDescription,
+        image: meta.thumbnail
+          ? meta.thumbnail
+          : `${siteUrl}/assets/thumbnail.png`,
         url: `${siteUrl}${pathname}`,
+        lang: meta.lang || language,
       };
       return (
-        <Helmet title={seo.title} titleTemplate={titleTemplate}>
-          <html lang={language} />
+        <Helmet
+          title={seo.title}
+          titleTemplate={seo.lang === "en" ? titleTemplate : altTitleTemplate}
+        >
+          <html lang={seo.lang} />
 
-          <meta name="description" content={seo.description} />
+          <meta name="description" content={seo.desc} />
           <meta name="image" content={seo.image} />
           <meta name="application-name" content={site} />
           <link rel="canonical" href={seo.url} />
 
           <meta property="og:url" content={seo.url} />
           <meta property="og:title" content={seo.title} />
-          <meta property="og:description" content={seo.description} />
+          <meta property="og:description" content={seo.desc} />
           <meta property="og:image" content={seo.image} />
           {meta.article && <meta property="og:type" content="article" />}
 
@@ -58,7 +77,7 @@ const Head: React.FC<IHeadProps> = ({ pathname, meta }) => (
 
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:title" content={seo.title} />
-          <meta name="twitter:description" content={seo.description} />
+          <meta name="twitter:description" content={seo.desc} />
           <meta name="twitter:image" content={seo.image} />
           <meta name="twitter:url" content={seo.url} />
         </Helmet>
@@ -76,8 +95,11 @@ const QueryHead = graphql`
         site
         siteUrl
         defaultTitle: title
+        altTitle
         titleTemplate
-        defaultDescription: description
+        altTitleTemplate
+        description
+        altDescription
         language
       }
     }

@@ -2,7 +2,7 @@ import * as React from "react";
 import { graphql } from "gatsby";
 
 import Layout from "./index";
-import { BackTit, Par } from "../components";
+import { Par } from "../components";
 
 import PageProps from "../ifaces/PageProps";
 import styled from "styled-components";
@@ -16,6 +16,7 @@ interface PostProps extends PageProps {
         path: string;
         title: string;
         date: string;
+        lang: string;
         excerpt: string;
       };
     };
@@ -28,14 +29,15 @@ const PostPage: React.FC<PostProps> = ({ location, data }) => {
   const seo = {
     title: frontmatter.title,
     date: frontmatter.date,
-    description: frontmatter.excerpt + " | article by Nick Friday",
+    desc: frontmatter.excerpt + " | article by Nick Friday",
+    lang: frontmatter.lang,
     article: true,
+    back: true,
   };
 
   return (
     <Layout location={location} seo={seo}>
       <>
-        <BackTit>{frontmatter.title}</BackTit>
         <Date>{frontmatter.date}</Date>
         <Par dangerouslySetInnerHTML={{ __html: html }} />
       </>
@@ -58,6 +60,7 @@ export const postQuery = graphql`
         path
         title
         date
+        lang
         excerpt
       }
     }

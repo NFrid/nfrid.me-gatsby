@@ -68,7 +68,7 @@ const MBox = styled.div`
 `;
 
 const Link = styled.a.attrs({
-  rel: "me",
+  rel: "me noreferrer nofollow",
   target: "_blank",
 })`
   padding: 0.7em 0.5em;

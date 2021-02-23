@@ -11,7 +11,6 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
   return (
     <Layout location={location}>
       <>
-        <Tit>Nick Friday&apos;s personal website</Tit>
         <Par>
           This website isn&apos;t completed right now. Please stay tuned!!
         </Par>

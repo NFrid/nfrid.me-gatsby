@@ -3,9 +3,12 @@ const date = new Date().toUTCString();
 module.exports = {
   siteMetadata: {
     site: `nfrid.me`,
-    title: `The`,
-    titleTemplate: `%s - nfrid.me`,
-    description: `Nick Friday's personal website`,
+    title: `🗿`,
+    altTitle: `🗿`,
+    titleTemplate: `%s - nfrid.me | Nick Friday's personal website`,
+    altTitleTemplate: `%s - nfrid.me | Ник Пятница: Личный вебсайт`,
+    description: `Cyberland of a modern cyberlandlord, Nick Friday a.k.a. undefined, the Blogger, the Writer, the The.`,
+    altDescription: `Киберимение современного кибербарина, Ника Пятницы a.k.a. undefined, блоггера, писателя, меня.`,
     siteUrl: `https://nfrid.me/`,
     language: `en`,
     refs: {
@@ -16,6 +19,14 @@ module.exports = {
     lastUpdate: date,
   },
   plugins: [
+    {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        host: "https://nfrid.me",
+        sitemap: "https://nfrid.me/sitemap.xml",
+        policy: [{ userAgent: "*", allow: "/" }],
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {

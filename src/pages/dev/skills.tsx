@@ -1,7 +1,6 @@
 import * as React from "react";
 
 import Layout from "../../layout/index";
-import { BackTit } from "../../components";
 import Menu from "../../components/Menu";
 
 import PageProps from "../../ifaces/PageProps";
@@ -12,11 +11,11 @@ const SkillsPage: React.FC<PageProps> = ({ location }) => {
       location={location}
       seo={{
         title: "Dev Skills",
-        description: "My skills as a developer | Nick Friday's CV-ish",
+        desc: "My skills as a developer | Nick Friday's CV-ish",
+        back: true,
       }}
     >
       <>
-        <BackTit>Ma skills (W.I.P, just for demo)</BackTit>
         <Menu>
           <Menu title="Web">
             <Menu title="Front-end">

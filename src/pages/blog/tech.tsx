@@ -1,5 +1,4 @@
 import * as React from "react";
-import { BackTit } from "../../components";
 
 import Layout from "../../layout/index";
 
@@ -11,13 +10,13 @@ const TechBlogPage: React.FC<PageProps> = ({ location }) => {
     <Layout
       location={location}
       seo={{
-        title: "Technologies",
-        description: "My technology blog | Nick Friday the Tech Man",
+        title: "Technology blog",
+        desc: "My technology blog | Nick Friday the Tech Man",
+        back: true,
       }}
     >
       <>
-        <BackTit>Technologies</BackTit>
-        <Blog lang="en" path="tech/" />
+        <Blog path="tech/" />
       </>
     </Layout>
   );

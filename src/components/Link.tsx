@@ -20,6 +20,7 @@ const NLink = (props: any) => (
 
 export default styled(NLink)`
   padding: 1em 0.5em;
+  font-size: 1.1em;
 
   &.active {
     color: ${c.greenish};

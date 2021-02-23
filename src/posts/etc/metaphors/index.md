@@ -2,6 +2,7 @@
 path: /blog/etc/metaphors
 title: Метафоры государства
 date: 20.02.2021
+lang: ru
 excerpt: Из работы по ВУЗовской дисциплине "Правоведение"
 ---
 
