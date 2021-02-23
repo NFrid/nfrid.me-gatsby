@@ -28,7 +28,7 @@ const PostPage: React.FC<PostProps> = ({ location, data }) => {
   const seo = {
     title: frontmatter.title,
     date: frontmatter.date,
-    desc: frontmatter.excerpt + " | article by Nick Friday",
+    desc: frontmatter.excerpt,
     lang: frontmatter.lang,
     article: true,
     back: true,

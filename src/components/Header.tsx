@@ -39,12 +39,14 @@ const Box = styled.div`
   background-color: ${c.bgd};
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   padding: 0 1rem;
 `;
 
 const Logo = styled.h1`
   color: ${c.greenish};
   font-size: 1.5rem;
+  margin-right: 0.5rem;
 `;
 
 const Nav = styled.div`

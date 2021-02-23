@@ -39,11 +39,13 @@ const Head: React.FC<IHeadProps> = ({ pathname, meta }) => (
           : meta.lang === "en"
           ? defaultTitle
           : altTitle,
-        desc: meta.desc
-          ? meta.desc
-          : meta.lang === "en"
-          ? description
-          : altDescription,
+        desc:
+          (meta.desc
+            ? meta.desc
+            : meta.lang === "en"
+            ? description
+            : altDescription) +
+          (meta.article ? " | article by Nick Friday." : ""),
         image: meta.thumbnail
           ? meta.thumbnail
           : `${siteUrl}/assets/thumbnail.png`,
