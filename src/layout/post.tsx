@@ -2,7 +2,6 @@ import * as React from "react";
 import { graphql } from "gatsby";
 
 import Layout from "./index";
-import { Par } from "../components";
 
 import PageProps from "../ifaces/PageProps";
 import styled from "styled-components";
@@ -41,7 +40,7 @@ const PostPage: React.FC<PostProps> = ({ location, data }) => {
         <Date>{frontmatter.date}</Date>
         <Excerpt text={frontmatter.excerpt} />
         <hr />
-        <Par dangerouslySetInnerHTML={{ __html: html }} />
+        <div dangerouslySetInnerHTML={{ __html: html }} />
       </PostWrapper>
     </Layout>
   );

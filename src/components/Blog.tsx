@@ -67,7 +67,7 @@ const Refs: React.FC<IProps> = ({ path }) => {
       }));
 
   return arts.length === 0 ? (
-    <Par>There&apos;s nothing right now | Здесь пока пусто :(</Par>
+    <Par>There&apos;s nothing right now | Здесь пока пусто :{"("}</Par>
   ) : (
     <>
       {arts.map((art, id) => (
