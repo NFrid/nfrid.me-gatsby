@@ -20,9 +20,9 @@ const BlogPage: React.FC<PageProps> = ({ location }) => {
         <hr />
         <Nav>
           {"<"}
-          <Link to={`/blog/tech`}>[ENG] Technologies and stuff</Link>
-          <Link to={`/blog/fic`}>[RUS] Околохудожественное</Link>
-          <Link to={`/blog/etc`}>[RUS] Прочее</Link>
+          <Link to={`/blog/tech`}>[EN] Technologies and stuff</Link>
+          <Link to={`/blog/fic`}>[RU] Околохудожественное</Link>
+          <Link to={`/blog/etc`}>[RU] Прочее</Link>
           {">"}
         </Nav>
         <hr />

@@ -1,5 +1,5 @@
 import { graphql, Link, useStaticQuery } from "gatsby";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { Par } from ".";
 import { c } from "../styles/colors";
@@ -17,6 +17,7 @@ interface IData {
           date: string;
           excerpt: string;
           path: string;
+          tags: string;
         };
       };
     }[];
@@ -29,9 +30,16 @@ interface IArt {
   excerpt: string;
   path: string;
   blog?: string;
+  tags: string[];
 }
 
 const Refs: React.FC<IProps> = ({ path }) => {
+  const initArts: IArt[] = [];
+  const [arts, setArts] = useState(initArts);
+
+  const initSortTags: string[] = [];
+  const [sortTags, setSortTags] = useState(initSortTags);
+
   const data: IData = useStaticQuery(graphql`
     {
       allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
@@ -42,6 +50,7 @@ const Refs: React.FC<IProps> = ({ path }) => {
               date
               excerpt
               path
+              tags
             }
           }
         }
@@ -49,7 +58,7 @@ const Refs: React.FC<IProps> = ({ path }) => {
     }
   `);
 
-  const arts: IArt[] = path
+  const allArts: IArt[] = path
     ? data.allMarkdownRemark.edges
         .filter((e) => e.node.frontmatter.path.match(`^/blog/${path}`))
         .map((e) => ({
@@ -57,19 +66,53 @@ const Refs: React.FC<IProps> = ({ path }) => {
           date: e.node.frontmatter.date,
           excerpt: e.node.frontmatter.excerpt,
           path: e.node.frontmatter.path,
+          tags: e.node.frontmatter.tags
+            ? e.node.frontmatter.tags.split(",")
+            : [],
         }))
     : data.allMarkdownRemark.edges.map((e) => ({
         title: e.node.frontmatter.title,
         blog: e.node.frontmatter.path.split("/")[2],
         date: e.node.frontmatter.date,
         excerpt: e.node.frontmatter.excerpt,
+        tags: e.node.frontmatter.tags ? e.node.frontmatter.tags.split(",") : [],
         path: e.node.frontmatter.path,
       }));
 
-  return arts.length === 0 ? (
-    <Par>There&apos;s nothing right now | Здесь пока пусто :{"("}</Par>
-  ) : (
+  useEffect(() => setArts(allArts), []);
+
+  const tags = [
+    ...allArts.reduce<Set<string>>((acc, art) => {
+      art.tags.forEach((tag) => acc.add(tag));
+      return acc;
+    }, new Set([])),
+  ];
+
+  const tagSort = (tags: string[]) => {
+    let sortedArts = allArts;
+    tags.forEach((tag) => {
+      sortedArts = sortedArts.filter((art) =>
+        art.tags ? art.tags.includes(tag) : false
+      );
+    });
+    setArts(sortedArts);
+  };
+
+  const tagToggle = (tag: string) => {
+    const sTags: Set<string> = new Set(sortTags);
+    sTags.has(tag) ? sTags.delete(tag) : sTags.add(tag);
+    setSortTags([...sTags]);
+    tagSort([...sTags]);
+  };
+
+  return (
     <>
+      {tags.map((tag, id) => (
+        <>
+          <input key={id} onChange={() => tagToggle(tag)} type="checkbox" />{" "}
+          {tag}
+        </>
+      ))}
       {arts.map((art, id) => (
         <BlogWrapper key={id}>
           {art.blog ? (
@@ -91,6 +134,11 @@ const Refs: React.FC<IProps> = ({ path }) => {
           <hr />
         </BlogWrapper>
       ))}
+      {arts.length === 0 ? (
+        <Par>No articles found | Ничего не найдено</Par>
+      ) : (
+        <></>
+      )}
     </>
   );
 };
