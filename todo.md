@@ -1,5 +1,13 @@
 # The Things
 
+## The The thing
+
+- [ ] Nice animations w/ 'react-spring' package
+- [ ] Breadcrumbs
+  - [ ] Breadcrumbs in header
+- [ ] Anime link in footer (finally)
+  - [ ] (maybe) anime page [???]
+
 ## The Blog thing
 
 - [x] Separate blogs
