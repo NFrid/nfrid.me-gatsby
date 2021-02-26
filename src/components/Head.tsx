@@ -32,7 +32,11 @@ const Head: React.FC<IHeadProps> = ({ pathname, meta }) => (
         },
       },
     }) => {
-      meta ? (meta.lang ? {} : (meta.lang = language)) : (meta = {});
+      meta
+        ? meta.lang
+          ? {}
+          : (meta.lang = language)
+        : (meta = { lang: "en" });
       const seo = {
         title: meta.title
           ? meta.title
