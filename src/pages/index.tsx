@@ -5,7 +5,7 @@ import Layout from "../layout/index";
 import { Tit, Par } from "../components";
 import Refs from "../components/Refs";
 
-import PageProps from "../ifaces/PageProps";
+import PageProps from "../types/PageProps";
 
 const IndexPage: React.FC<PageProps> = ({ location }) => {
   return (

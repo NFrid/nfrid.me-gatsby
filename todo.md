@@ -2,6 +2,8 @@
 
 ## The The thing
 
+- [ ] Multilingual support (ru/en) w/
+      [diz](https://github.com/angeloocana/gatsby-plugin-i18n)
 - [ ] Nice animations w/ 'react-spring' package
 - [ ] Breadcrumbs
   - [ ] Breadcrumbs in header

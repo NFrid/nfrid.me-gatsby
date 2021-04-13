@@ -2,7 +2,7 @@ import * as React from "react";
 
 import Layout from "../../layout/index";
 
-import PageProps from "../../ifaces/PageProps";
+import PageProps from "../../types/PageProps";
 import Blog from "../../components/Blog";
 
 const TechBlogPage: React.FC<PageProps> = ({ location }) => {

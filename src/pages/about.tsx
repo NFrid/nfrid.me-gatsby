@@ -4,7 +4,7 @@ import { graphql, StaticQuery } from "gatsby";
 import Layout from "../layout";
 import { Par, Em } from "../components";
 
-import PageProps from "../ifaces/PageProps";
+import PageProps from "../types/PageProps";
 
 const AboutPage: React.FC<PageProps> = ({ location }) => (
   <StaticQuery

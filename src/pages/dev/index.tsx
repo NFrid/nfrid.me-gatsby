@@ -4,7 +4,7 @@ import Layout from "../../layout/index";
 
 import { Link } from "gatsby";
 
-import PageProps from "../../ifaces/PageProps";
+import PageProps from "../../types/PageProps";
 
 const DevPage: React.FC<PageProps> = ({ location }) => {
   return (

@@ -3,7 +3,7 @@ import { Par } from "../components";
 
 import Layout from "../layout/index";
 
-import PageProps from "../ifaces/PageProps";
+import PageProps from "../types/PageProps";
 
 const NotFoundPage: React.FC<PageProps> = ({ location }) => {
   return (

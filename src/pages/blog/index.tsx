@@ -3,7 +3,7 @@ import * as React from "react";
 import Layout from "../../layout/index";
 import { Link } from "gatsby";
 
-import PageProps from "../../ifaces/PageProps";
+import PageProps from "../../types/PageProps";
 import Blog from "../../components/Blog";
 import styled from "styled-components";
 

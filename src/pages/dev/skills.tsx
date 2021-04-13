@@ -3,7 +3,7 @@ import * as React from "react";
 import Layout from "../../layout/index";
 import Menu from "../../components/Menu";
 
-import PageProps from "../../ifaces/PageProps";
+import PageProps from "../../types/PageProps";
 
 const SkillsPage: React.FC<PageProps> = ({ location }) => {
   return (

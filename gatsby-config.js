@@ -14,6 +14,7 @@ module.exports = {
     refs: {
       mastodon: `https://mastodon.ml/@nf`,
       telegram: `https://t.me/nfrid5`,
+      dev: `https://dev.to/nfrid`,
       github: `https://github.com/NFrid`,
     },
     lastUpdate: date,
@@ -85,5 +86,66 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-vercel`,
+    {
+      resolve: `gatsby-plugin-feed`,
+      options: {
+        query: `
+          {
+            site {
+              siteMetadata {
+                title
+                description
+                siteUrl
+                site_url: siteUrl
+              }
+            }
+          }
+        `,
+        feeds: [
+          {
+            serialize: ({ query: { site, allMarkdownRemark } }) => {
+              return allMarkdownRemark.edges.map((edge) => {
+                const fm = edge.node.frontmatter;
+                const datesplit = fm.date.split(".");
+                const date = new Date(
+                  datesplit[2] + "-" + datesplit[1] + "-" + datesplit[0]
+                );
+                return Object.assign({}, fm, {
+                  description: fm.excerpt,
+                  date: date,
+                  url: site.siteMetadata.siteUrl + fm.path,
+                  guid: site.siteMetadata.siteUrl + fm.path,
+                  lang: fm.lang,
+                  tags: fm.tags,
+                  category: fm.path.split("/")[2],
+                });
+              });
+            },
+            query: `
+              {
+                allMarkdownRemark(
+                  sort: { order: DESC, fields: [frontmatter___date] },
+                ) {
+                  edges {
+                    node {
+                      frontmatter {
+                        path
+                        title
+                        date
+                        lang
+                        tags
+                        excerpt
+                      }
+                    }
+                  }
+                }
+              }
+            `,
+            output: "/rss.xml",
+            title: "Nick Friday's blog feed",
+          },
+        ],
+      },
+    },
   ],
 };

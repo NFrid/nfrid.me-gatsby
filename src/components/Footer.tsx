@@ -10,7 +10,7 @@ const Footer: React.FC = () => (
     render={({
       site: {
         siteMetadata: {
-          refs: { mastodon, github, telegram },
+          refs: { mastodon, github, dev, telegram },
         },
       },
     }) => (
@@ -38,7 +38,7 @@ const Footer: React.FC = () => (
         <div>© 2021 Nick Friday a.k.a. undefined</div>
         <MBox>
           <Link href={mastodon}>Mastodon</Link>|
-          <Link href={github}>GitHub</Link>|
+          <Link href={github}>GitHub</Link>|<Link href={dev}>Dev.to</Link>|
           <Link href={telegram}>Telegram</Link>
         </MBox>
       </Box>
@@ -81,6 +81,7 @@ const QueryFooter = graphql`
         refs {
           mastodon
           github
+          dev
           telegram
         }
       }

@@ -3,7 +3,7 @@ import { graphql } from "gatsby";
 
 import Layout from "./index";
 
-import PageProps from "../ifaces/PageProps";
+import PageProps from "../types/PageProps";
 import styled from "styled-components";
 import { c } from "../styles/colors";
 
