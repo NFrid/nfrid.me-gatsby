@@ -31,7 +31,6 @@ const PostPage: React.FC<PostProps> = ({ location, data }) => {
     desc: frontmatter.excerpt,
     lang: frontmatter.lang,
     article: true,
-    back: true,
   };
 
   return (

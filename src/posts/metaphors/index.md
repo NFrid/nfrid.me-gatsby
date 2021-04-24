@@ -1,5 +1,5 @@
 ---
-path: /blog/etc/metaphors
+path: /blog/metaphors
 title: Метафоры государства
 date: 20.02.2021
 lang: ru

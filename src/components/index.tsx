@@ -1,38 +1,12 @@
-import React from "react";
 import styled, { keyframes } from "styled-components";
 
 import { c } from "../styles/colors";
-
-interface IChildren {
-  children: string;
-}
 
 export const Tit = styled.h1`
   text-align: center;
   font-size: 1.5em;
   color: ${c.purpleish};
 `;
-
-const BackWrap = styled.div`
-  display: flex;
-`;
-
-const BackB = styled.a`
-  font-size: 1.2em;
-  text-align: center;
-  background: none;
-  border: none;
-  margin: auto 1em;
-  padding: 0;
-  cursor: pointer;
-`;
-
-export const BackTit: React.FC<IChildren> = ({ children }) => (
-  <BackWrap>
-    <BackB onClick={() => history.back()}>{"<- "}Back</BackB>
-    <Tit>{children}</Tit>
-  </BackWrap>
-);
 
 export const Par = styled.p`
   font-size: 1.1em;

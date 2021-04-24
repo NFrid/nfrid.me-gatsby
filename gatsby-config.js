@@ -117,7 +117,6 @@ module.exports = {
                   guid: site.siteMetadata.siteUrl + fm.path,
                   lang: fm.lang,
                   tags: fm.tags,
-                  category: fm.path.split("/")[2],
                 });
               });
             },
