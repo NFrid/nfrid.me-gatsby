@@ -2,6 +2,10 @@ import { createGlobalStyle } from "styled-components";
 import { c } from "./colors";
 
 const GlobalStyle = createGlobalStyle`
+  *, ::after, ::before {
+      box-sizing: border-box;
+  }
+
   html {
     overflow: scroll;
     overflow-x: hidden;
@@ -16,8 +20,6 @@ const GlobalStyle = createGlobalStyle`
   body {
     font-family: Verdana, Helvetica, sans-serif;
     background: ${c.bg};
-    height: 100vh;
-    padding: 2em;
     margin: 0;
     padding: 0;
     color: ${c.grayish};
@@ -25,9 +27,9 @@ const GlobalStyle = createGlobalStyle`
   }
 
   a {
-  text-decoration: none;
-  color: ${c.yellowish};
-  transition: 0.2s;
+    text-decoration: none;
+    color: ${c.yellowish};
+    transition: 0.2s;
 
     &:hover {
       color: ${c.purpleish};

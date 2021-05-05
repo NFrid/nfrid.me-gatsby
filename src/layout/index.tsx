@@ -39,7 +39,7 @@ export default DefaultLayout;
 const Flex = styled.div`
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: calc(100vh - 1px);
 `;
 
 const Box = styled.div`
