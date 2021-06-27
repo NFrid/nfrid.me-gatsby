@@ -9,7 +9,7 @@ module.exports = {
     altTitleTemplate: `%s - nfrid.me | Ник Пятница: Личный вебсайт`,
     description: `Cyberland of a modern cyberlandlord, Nick Friday a.k.a. undefined, the Dev, the Blogger, the Writer, the The.`,
     altDescription: `Киберимение современного кибербарина, Ника Пятницы a.k.a. undefined, разработчика, блоггера, писателя, меня.`,
-    siteUrl: `https://nfrid.me/`,
+    siteUrl: `https://old.nfrid.me/`,
     language: `en`,
     refs: {
       mastodon: `https://mastodon.ml/@nf`,
@@ -23,7 +23,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-robots-txt",
       options: {
-        host: "https://nfrid.me",
+        host: "https://old.nfrid.me",
         sitemap: "https://nfrid.me/sitemap.xml",
         policy: [{ userAgent: "*", allow: "/" }],
       },
@@ -70,8 +70,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `nfrid.me`,
-        short_name: `nfrid.me`,
+        name: `old.nfrid.me`,
+        short_name: `old.nfrid.me`,
         start_url: `/`,
         display: `standalone`,
         icon: `src/images/icon.png`,

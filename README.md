@@ -1,4 +1,4 @@
-# nfrid.me (gatsby)
+# [old.nfrid.me](https://old.nfrid.me/) (gatsby)
 
 The old version of my personal website.
 

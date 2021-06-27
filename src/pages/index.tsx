@@ -15,13 +15,10 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
           This website isn&apos;t completed right now. Please stay tuned!!
         </Par>
         <Par>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
+          Really - it won't be completed. I am making (or already made){" "}
+          <a href="https://nfrid.me" target="_blank">a new one</a>.
+          <br/>
+          I keep this version on 'old' subdomain cuz why not.
         </Par>
         <Tit>👽️</Tit>
         <Refs title="Some useful links" refs={refs} />
@@ -35,7 +32,7 @@ export default IndexPage;
 const refs = [
   {
     text: "Project's GitHub page",
-    href: "https://github.com/NFrid/nfrid.me",
+    href: "https://github.com/NFrid/nfrid.me-gatsby",
   },
   {
     text: "Very important stuff !!",

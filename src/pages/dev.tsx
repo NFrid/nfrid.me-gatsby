@@ -25,22 +25,14 @@ const SkillsPage: React.FC<PageProps> = ({ location }) => {
           </div>
           <Menu title="Portfolio">
             <div title="Front only">
-              <ul>
-                <li>
-                  <a
-                    target="_blank"
-                    rel="noreferrer nofollow"
-                    href="https://github.com/NFrid/muh-front"
-                  >
-                    My front end practice stuff (css and html only)
-                  </a>
-                </li>
-              </ul>
+              no
             </div>
             <div title="Full sized">
               <ul>
                 <li>Well... This site?</li>
+                <li>and.. the new one??</li>
               </ul>
+              see mainpage.
             </div>
           </Menu>
         </Menu>
